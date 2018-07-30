@@ -30,7 +30,7 @@ export default class CriminalBackgroudDocument extends React.Component {
               <div className='tracking-card' id={hrefId}>
                 <div className='tracking-card row'>
                   <div className={'tracking-card-header people_documents'}>
-                    <h3>{person.get('person_type') + ': ' + person.get('person_name') + ' RFA Documents'}</h3>
+                    <h3>{person.get('person_type') + ': ' + person.get('person_name') + ' Criminal Background Checklist'}</h3>
                   </div>
                   <div className='tracking-table'>
                     <EmergencyPlacement
