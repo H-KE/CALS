@@ -1,0 +1,32 @@
+.contacts-table {
+  border: none !important;
+}
+
+.ReactTable .rt-thead .rt-th.-sort-asc,
+.ReactTable .rt-thead .rt-th.-sort-desc {
+  color: #2974a2;
+}
+
+.contacts-table .rt-thead.-header {
+  box-shadow: none !important;
+  border-bottom: 2px solid #CCCCCC;
+}
+
+.contacts-th {
+  white-space: nowrap !important;
+  font-weight: 600;
+  text-align: left;
+  border: none !important;
+  padding: 15px 5px !important;
+
+}
+
+.contacts-td {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #070707;
+  border-right: none !important;
+  border-left: none !important;
+  white-space: nowrap !important;
+  padding: 15px 5px !important;
+}

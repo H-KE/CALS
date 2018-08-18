@@ -2,7 +2,8 @@
       <%= react_component('rfa_forms/profile', {
          user: @user,
          rfa_application: @rfa_application,
-         tracking: @tracking},
+         tracking: @tracking,
+         contacts: @contacts},
         {prerender: false}) %>
     <%= javascript_pack_tag 'rfa_forms/profile' %>
 </div>
