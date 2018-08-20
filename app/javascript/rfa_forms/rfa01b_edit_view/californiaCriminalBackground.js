@@ -62,7 +62,7 @@ export default class CaliforniaCriminalBackground extends React.Component {
             <YesNoRadioComponent
               idPrefix='californiaCriminalBackgroundRadio'
               value={convictedInCalifornia}
-              onFieldChange={(event) => this.props.handleClearOnConditionalChange('convicted_in_california', event.target.value, 'convicted_in_california_disclosures', [disclosureDefaults])} />
+              onFieldChange={(event) => this.props.handleClearOnConditionalChange('convicted_in_california', event.target.value, 'convicted_in_california_disclosures', null)} />
 
           </div>
         </div>

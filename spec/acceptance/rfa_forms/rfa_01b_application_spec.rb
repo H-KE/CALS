@@ -121,7 +121,7 @@ RSpec.feature 'RFA01B', js: true, inaccessible: true do
     fill_in('applicants[0].last_name', with: 'Moen', match: :prefer_exact)
     expect(page).to have_button('Save Progress', disabled: false)
     expect(page).to have_button('Submit', disabled: true)
-    fill_in('applicants[0].date_of_birth', with: '11/11/1111', match: :prefer_exact)
+    fill_in('applicants[0].date_of_birth', with: '11/11/1990', match: :prefer_exact)
     select 'Male', from: 'applicants[0].gender'
     expect(page).to have_content 'Phone Number'
     fill_in 'applicants[0].phones[0].number', with: '201-222-2345'
@@ -146,11 +146,11 @@ RSpec.feature 'RFA01B', js: true, inaccessible: true do
     click_button('Save Progress')
     visit page.driver.current_url
     click_link('Geovanni Moen')
-    expect(page).to have_button('Submit', disabled: true)
+    expect(page).to have_button('Submit', disabled: false)
     fill_in('applicant_first_name', with: 'first name', match: :prefer_exact)
     fill_in('applicant_last_name', with: 'last name', match: :prefer_exact)
     fill_in('NameOfResourceFamily', with: 'test', match: :prefer_exact)
-    fill_in('date_of_birth', with: '11/11/1111', match: :prefer_exact)
+    fill_in('date_of_birth', with: '11/11/1999', match: :prefer_exact)
     fill_in('Residentialstreet_address', with: '2870 something else', match: :prefer_exact)
     fill_in('Residentialzip', with: '12345', match: :prefer_exact)
     fill_in('Residentialcity', with: 'Sacremento', match: :prefer_exact)
@@ -180,6 +180,7 @@ RSpec.feature 'RFA01B', js: true, inaccessible: true do
     expect(page).to have_button('Submit', disabled: false)
     click_button 'Submit'
     expect(page).not_to have_content('an exception occured: form-submission-validation')
+    sleep(3.seconds)
     visit page.driver.current_url
     expect(page).to have_button('Submit', disabled: true)
     fill_in('applicant_first_name', with: 'G', match: :prefer_exact)

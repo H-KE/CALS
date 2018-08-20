@@ -185,6 +185,7 @@ node('cals-slave') {
         pipelineStatus = 'FAILED'
         currentBuild.result = 'FAILURE'
         newTag = ''
+        throw e
     }
     finally {
         // bring all containers down

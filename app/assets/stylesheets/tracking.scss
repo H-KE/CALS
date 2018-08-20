@@ -82,13 +82,22 @@ li.navlink {
   margin: 5px;
 }
 
-table {
-  table-layout: fixed;
+.align-row {
+  padding-left: 2rem
+}
 
-  input[type="checkbox"] +label {
+table {
+  @media (min-width: 992px) and (max-width: 1220px) {
+    input[type="checkbox"] label {
+      margin-bottom: 2.5rem;
+    }
+  }
+  label {
+      text-indent: -2.5rem !important;
+    }
   }
 }
-}
+
 #outOfStateRegistryCheck {
   margin: 2rem 0;
 

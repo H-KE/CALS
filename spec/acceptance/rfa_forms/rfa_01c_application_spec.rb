@@ -59,11 +59,11 @@ RSpec.feature 'RFA01C', js: true, inaccessible: true do
     click_button('Save Progress')
     visit page.driver.current_url
     click_link("#{first_name} #{last_name}")
-    expect(page).to have_button('Submit', disabled: true)
+    expect(page).to have_button('Submit', disabled: false)
     fill_in('applicant_first_name', with: 'first name', match: :prefer_exact)
     fill_in('applicant_last_name', with: 'last name', match: :prefer_exact)
     fill_in('NameOfResourceFamily', with: 'test', match: :prefer_exact)
-    fill_in('date_of_birth', with: '11/11/1111', match: :prefer_exact)
+    fill_in('date_of_birth', with: '11/11/1990', match: :prefer_exact)
     fill_in('Residentialstreet_address', with: '2870 something else', match: :prefer_exact)
     fill_in('Residentialzip', with: '12345', match: :prefer_exact)
     fill_in('Residentialcity', with: 'Sacremento', match: :prefer_exact)

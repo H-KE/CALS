@@ -22,7 +22,7 @@ const FamilyDocRow = ({
               key={index}
               labelId={'checkLabel' + index}
               label={docs.title}
-              gridClassName='col-xs-12'
+              gridClassName='col-xs-12 align-row'
               onChange={(event) => handleChange('checked', event.target.checked, index)}
               defaultChecked={docs.checked}
             />
@@ -52,7 +52,7 @@ const FamilyDocRow = ({
               key={index}
               labelId={'checkLabel' + index}
               label={docs.title}
-              gridClassName='col-xs-12'
+              gridClassName='col-xs-12 align-row'
               defaultChecked={docs.checked} />
             </td>
             <td />

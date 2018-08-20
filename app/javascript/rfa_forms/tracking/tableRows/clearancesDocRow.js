@@ -29,7 +29,7 @@ const ClearancesDocRow = ({
               key={itemIndex}
               labelId={'checkLabel' + itemIndex}
               label={href}
-              gridClassName='col-xs-12'
+              gridClassName='col-xs-12 align-row'
               onChange={(event) => handleChange('checked', event.target.checked, peopleIndex, itemIndex)}
               defaultChecked={peopleDoc.checked}
             />
@@ -67,7 +67,7 @@ const ClearancesDocRow = ({
                 key={index}
                 labelId={'checkLabel' + index}
                 label={href}
-                gridClassName='col-xs-12'
+                gridClassName='col-xs-12 align-row'
                 defaultChecked={peopleDoc.checked} />
             </td>
             <td id={'clearance' + peopleIndex + 'ShowStartDate' + index}>

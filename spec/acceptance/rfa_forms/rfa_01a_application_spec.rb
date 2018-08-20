@@ -101,7 +101,7 @@ RSpec.feature 'RFA01A', js: true, inaccessible: true do
     fill_in('applicants[0].last_name', with: 'Moen', match: :prefer_exact)
     expect(page).to have_button('Save Progress', disabled: false)
     expect(page).to have_button('Submit', disabled: true)
-    fill_in('applicants[0].date_of_birth', with: '11/11/1986', match: :prefer_exact)
+    fill_in('applicants[0].date_of_birth', with: '11/11/1996', match: :prefer_exact)
     select 'Male', from: 'applicants[0].gender'
     expect(page).to have_content 'Phone Number'
     fill_in 'applicants[0].phones[0].number', with: '201-222-2345'
@@ -147,7 +147,7 @@ RSpec.feature 'RFA01A', js: true, inaccessible: true do
 
     fill_in('relationship_to_applicants0adult0relationship_to_applicant_freeform', with: 'child', match: :prefer_exact)
     expect(page).to have_button('Submit', disabled: true)
-    fill_in('other_adults[0].date_of_birth', with: '12/12/1986', match: :prefer_exact)
+    fill_in('other_adults[0].date_of_birth', with: '12/12/1976', match: :prefer_exact)
     select 'Male', from: 'applicants[0].gender'
     fill_in('other_adults[0].first_name', with: 'Peter', match: :prefer_exact)
     expect(page).to have_button('Submit', disabled: true)

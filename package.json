@@ -72,7 +72,7 @@
     "karma-ie11": "./bin/karma --browsers 'IE11 - Win7'",
     "karma-ie": "./bin/karma --browsers 'MSEdge - Win10','IE11 - Win7'",
     "spec": "rspec spec; open reports/coverage/rspec/index.html;",
-    "spec-ci": "SELENIUM_BROWSER=HEADLESS_CHROME bundle exec rspec spec;",
+    "spec-ci": "SELENIUM_BROWSER=HEADLESS_CHROME bundle exec rspec spec",
     "spec-ie": "SELENIUM_BROWSER=INTERNET_EXPLORER bundle exec rspec spec;",
     "spec-end2end-acceptance": "TEST_END_TO_END=true SELENIUM_BROWSER=HEADLESS_CHROME bundle exec rspec spec/acceptance",
     "spec-end2end-acceptance-chrome": "TEST_END_TO_END=true SELENIUM_BROWSER=CHROME bundle exec rspec spec/acceptance",

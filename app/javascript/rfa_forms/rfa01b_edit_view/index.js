@@ -69,6 +69,16 @@ export default class Rfa01bEditView extends React.Component {
     }
   }
 
+  componentDidMount () {
+    let submitEnabled = false
+    if (!validateStatus(this.state.rfa_a01_application.status)) {
+      if (this.state.application.metadata === undefined) {
+        submitEnabled = this.validateAllRequiredForSubmit(this.state.application)
+        this.setState({disableSubmit: !submitEnabled})
+      }
+    }
+  }
+
   componentDidUpdate (prevProps, prevState) {
     if (prevState.application !== this.state.application) {
       const disableSubmit = !(!validateStatus(this.props.rfa_a01_application.status) &&
@@ -86,7 +96,6 @@ export default class Rfa01bEditView extends React.Component {
     let requiredRules = this.validator.allIsRequiredRules()
     requiredRules = requiredRules.merge(this.validator.allValidationsWithOnlyRule('isRequiredBoolean'))
     requiredRules = requiredRules.merge(this.validator.allValidationsWithOnlyRule('isRequiredIf'))
-
     return this.validator.validateAllFieldsWithRules(data, requiredRules)
   }
 
@@ -153,9 +162,7 @@ export default class Rfa01bEditView extends React.Component {
   setApplicationState (key, value) {
     let newStateApplication = Immutable.fromJS(this.state.application).set(key, value)
     this.setState({
-      application: newStateApplication.toJS(),
-      disableSubmit: !(!validateStatus(this.state.rfa_a01_application.status) &&
-        this.validateAllRequiredForSubmit(newStateApplication.toJS()))
+      application: newStateApplication.toJS()
     })
   }
 

@@ -85,14 +85,14 @@ describe('Verify californiaCriminalBackground card', function () {
       let cardComponent = componentMount.find('input[type="radio"]')
       let trueComponent = cardComponent.find('#californiaCriminalBackgroundRadiotrue')
       trueComponent.simulate('change', {target: {value: 'true'}})
-      expect(handleClearOnConditionalChangeSpy).toHaveBeenCalledWith('convicted_in_california', 'true', 'convicted_in_california_disclosures', [ Object({ offense: '', offense_city: '', offense_state: Object({ value: 'California', id: 'CA' }), offense_date: '', when_offense_happen: '', offense_details: '' }) ])
+      expect(handleClearOnConditionalChangeSpy).toHaveBeenCalledWith('convicted_in_california', 'true', 'convicted_in_california_disclosures', null)
     })
 
     it('onClick event shows lived in other state multi select', () => {
       let cardComponent = componentMountWithoutDisclosures.find('input[type="radio"]')
       let trueComponent = cardComponent.find('#californiaCriminalBackgroundRadiotrue')
       trueComponent.simulate('change', {target: {value: 'false'}})
-      expect(handleClearOnConditionalChangeSpy).toHaveBeenCalledWith('convicted_in_california', 'false', 'convicted_in_california_disclosures', [ Object({ offense: '', offense_city: '', offense_state: Object({ value: 'California', id: 'CA' }), offense_date: '', when_offense_happen: '', offense_details: '' }) ])
+      expect(handleClearOnConditionalChangeSpy).toHaveBeenCalledWith('convicted_in_california', 'false', 'convicted_in_california_disclosures', null)
     })
     it('onchange sets disclosures ', () => {
       let cardComponent = componentMountWithoutDisclosures.find('#californiaCriminalBackgroundoffenseReason').hostNodes()

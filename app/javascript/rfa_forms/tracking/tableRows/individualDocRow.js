@@ -23,7 +23,7 @@ const IndividualDocRow = ({
               key={itemIndex}
               labelId={'checkLabel' + itemIndex}
               label={peopleDoc.title}
-              gridClassName='col-xs-12'
+              gridClassName='col-xs-12 align-row'
               onChange={(event) => handleChange('checked', event.target.checked, peopleIndex, itemIndex)}
               defaultChecked={peopleDoc.checked}
             />
@@ -61,7 +61,7 @@ const IndividualDocRow = ({
                 key={index}
                 labelId={'checkLabel' + index}
                 label={peopleDoc.title}
-                gridClassName='col-xs-12'
+                gridClassName='col-xs-12 align-row'
                 defaultChecked={peopleDoc.checked} />
             </td>
             <td id={'individual' + peopleIndex + 'showStartDate' + index}>
