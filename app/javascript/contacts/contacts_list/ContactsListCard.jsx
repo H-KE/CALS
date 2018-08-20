@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import ContactsTable from './ContacsTable'
+import ContactsTable from './ContactsTable'
 
 export default class ContactsListCard extends React.Component {
   constructor (props) {
@@ -16,14 +16,14 @@ export default class ContactsListCard extends React.Component {
       contactsListContent = <ContactsTable contacts={this.state.contacts} />
     } else {
       contactsListContent = (
-        <div className='text-center pad-top'>
+        <div className='no-contacts text-center pad-top'>
           <h4>No Contacts recorded</h4>
           Summary of Contacts will dispaly here once at least one Contact has been created.
         </div>
       )
     }
     if (this.props.title) {
-      title = <div className='card-header'><span>{this.props.title}</span></div>
+      title = <div className='card-header contacts-list-title'><span>{this.props.title}</span></div>
     } else {
       title = <Fragment />
     }
@@ -32,10 +32,10 @@ export default class ContactsListCard extends React.Component {
         <div id='ContactsListCard' className='card double-gap-top active-bar'>
           {title}
           <div className='card-body'>
-            <div id='Contactstable' className='pad-top'>
+            <div id='ContactsTable' className='pad-top'>
               {contactsListContent}
               <div className='text-right'>
-                <button onClick={this.props.onClickCreateContact} className='btn btn-default'>+ CREATE NEW CONTACT</button>
+                <button onClick={this.props.onClickCreateContact} className='btn btn-default btn-create-contact'>+ CREATE NEW CONTACT</button>
               </div>
             </div>
           </div>

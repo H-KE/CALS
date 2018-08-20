@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import ReactTable from 'react-table'
 import Moment from 'moment'
 import {urlPrefixHelper} from 'helpers/url_prefix_helper.js.erb'
 import {sortbyDate} from 'search/common/commonUtils'
+import ApplicantCard from '../../rfa_forms/rfa01a_edit_view/applicantCard'
 
 export default class ContactsTable extends React.Component {
   constructor (props) {
@@ -15,24 +16,22 @@ export default class ContactsTable extends React.Component {
   render () {
     const {contacts} = this.state
     return (
-      <Fragment>
-        <ReactTable
-          className={'contacts-table'}
-          data={contacts}
-          columns={columns}
-          defaultPageSize={contacts.length}
-          showPagination={false}
-          sortable={true}
-          resizable={false}
-          noDataText=''
-          defaultSorted={[
-            {
-              id: 'date',
-              desc: true
-            }
-          ]}
-        />
-      </Fragment>
+      <ReactTable
+        className={'contacts-table'}
+        data={contacts}
+        columns={columns}
+        defaultPageSize={contacts.length}
+        showPagination={false}
+        sortable={true}
+        resizable={false}
+        noDataText=''
+        defaultSorted={[
+          {
+            id: 'date',
+            desc: true
+          }
+        ]}
+      />
     )
   }
 }
@@ -78,3 +77,7 @@ const columns = [
     Cell: row => (<a href={urlPrefixHelper('/contacts/' + row.value.id + '/edit')}>{row.value.title}</a>)
   }
 ]
+
+ContactsTable.defaultProps = {
+  contacts: []
+}

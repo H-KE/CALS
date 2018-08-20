@@ -3,7 +3,7 @@ import Immutable from 'immutable'
 import CardsGroupLayout from 'components/common/cardsGroupLayout.js'
 import {urlPrefixHelper} from 'helpers/url_prefix_helper.js.erb'
 import PageHeader from 'components/common/pageHeader'
-import ContactsListCard from 'contacts/contacts_list/contactsListCard'
+import ContactsListCard from 'contacts/contacts_list/ContactsListCard'
 
 export default class Profile extends React.Component {
   constructor (props) {
