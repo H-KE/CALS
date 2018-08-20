@@ -9,7 +9,7 @@ class Rfa::ProfileController < CalsBaseController
   end
 
   def contact_helper
-     Helpers::Rfa::ContactHelper.new(auth_header: get_session_token)
+    Helpers::Rfa::ContactHelper.new(auth_header: get_session_token)
   end
 
   def rfa_application_helper
