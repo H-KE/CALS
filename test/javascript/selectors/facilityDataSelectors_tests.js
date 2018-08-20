@@ -34,6 +34,8 @@ describe('facilityDataSelectors', () => {
             'assigned_worker': {
               'full_name': 'Ananya Nandi'
             },
+            'capacity': 0,
+            'available_beds': 0,
             'district_office': {
               'number': '19',
               'name': 'PACIFIC INLAND CR'
@@ -69,8 +71,9 @@ describe('facilityDataSelectors', () => {
         }
       }
       expect(getFacilityData(state)).toEqual({
-        capacity: 'N/A',
+        capacity: 0,
         capacity_last_changed: 'N/A',
+        available_beds: 0,
         district_office: 'PACIFIC INLAND CR',
         licensee_name: 'Ananya Nandi',
         license_number: '100000299',

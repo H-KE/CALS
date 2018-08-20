@@ -38,9 +38,6 @@ const FacilityDetails = ({
           <SmallInnerBlockDetails
             title='STATUS'
             value={facilityData.status} />
-          <SmallInnerBlockDetails
-            title='CAPACITY / CAPACITY LAST CHANGED'
-            value={facilityData.capacity + ' / ' + facilityData.capacity_last_changed} />
         </div>
       </div>
       <div className='col-xs-12 col-sm-4 col-md-4 col-lg-4'>
