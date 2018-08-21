@@ -33,6 +33,7 @@ dump.rdb
 
 .byebug_history
 /public/assets
+/public/cals
 /public/packs
 /public/packs-tests
 /public/packs-test
