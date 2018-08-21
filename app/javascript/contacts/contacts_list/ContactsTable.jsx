@@ -1,9 +1,7 @@
 import React from 'react'
 import ReactTable from 'react-table'
-import Moment from 'moment'
 import {urlPrefixHelper} from 'helpers/url_prefix_helper.js.erb'
-import {sortbyDate} from 'search/common/commonUtils'
-import ApplicantCard from '../../rfa_forms/rfa01a_edit_view/applicantCard'
+import {sortbyDate, formatDate} from 'search/common/commonUtils'
 
 export default class ContactsTable extends React.Component {
   constructor (props) {
@@ -41,11 +39,7 @@ const columns = [
     Header: h => <span> Date <i className='fa fa-unsorted' /></span>,
     headerClassName: 'contacts-th',
     id: 'date',
-    accessor: d => {
-      return Moment(d.date)
-        .local()
-        .format('MM/DD/YYYY')
-    },
+    accessor: d => { return formatDate(d.date) },
     maxWidth: 100,
     className: 'contacts-td',
     sortMethod: (a, b) => sortbyDate(a, b)

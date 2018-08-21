@@ -1,4 +1,4 @@
-import { checkAndSplitValue, checkForLicenseStatus, sortbyDate } from 'search/common/commonUtils.js'
+import { checkAndSplitValue, checkForLicenseStatus, sortbyDate, formatDate } from 'search/common/commonUtils.js'
 
 describe('check and split value method with different inputs', () => {
   it('should return wildcard tokens attached to both words', () => {
@@ -51,5 +51,14 @@ describe('sort by date ', () => {
     const b = '04/30/2001'
     const output = 1
     expect(sortbyDate(a, b)).toEqual(output)
+  })
+})
+
+describe('format date', () => {
+  it('should return formatted date by default ', () => {
+    expect(formatDate('1978-12-31')).toEqual('12/31/1978')
+  })
+  it('should return custom formatted date', () => {
+    expect(formatDate('1978-12-31', 'DD/MM/YYYY')).toEqual('31/12/1978')
   })
 })

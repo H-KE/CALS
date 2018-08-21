@@ -1,4 +1,5 @@
 import React from 'react'
+import Moment from 'moment'
 
 export const respectiveStreetAddressOrNA = (addresses, addressType) => {
   const addressObject = addresses && addresses.find(o => o.type === addressType)
@@ -128,3 +129,7 @@ export const handleLicenseEffectiveDate = (result) => {
     return 'N/A'
   }
 }
+
+export const defaultDateFormat = 'MM/DD/YYYY'
+
+export const formatDate = (date, format) => { return Moment(date).local().format(format || defaultDateFormat) }
