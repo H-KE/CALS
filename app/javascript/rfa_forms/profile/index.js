@@ -39,7 +39,7 @@ export default class Profile extends React.Component {
                 </div>
                 <div id='contacts-card' className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12' >
                   <ContactsListCard
-                    title={'Contacts'}
+                    title={'Summary of Contacts'}
                     contacts={this.state.contacts}
                     onClickCreateContact={() => { window.location.href = createContactUrl }}
                   />

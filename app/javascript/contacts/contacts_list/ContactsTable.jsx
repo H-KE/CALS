@@ -45,7 +45,7 @@ const columns = [
     sortMethod: (a, b) => sortbyDate(a, b)
   },
   {
-    Header: h => <span> Method of Contacts <i className='fa fa-unsorted' /></span>,
+    Header: h => <span> Method of Contact <i className='fa fa-unsorted' /></span>,
     headerClassName: 'contacts-th',
     id: 'contact_method',
     accessor: 'contact_method.value',

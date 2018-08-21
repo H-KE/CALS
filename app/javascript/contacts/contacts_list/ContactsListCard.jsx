@@ -18,7 +18,7 @@ export default class ContactsListCard extends React.Component {
       contactsListContent = (
         <div className='no-contacts text-center pad-top'>
           <h4>No Contacts recorded</h4>
-          Summary of Contacts will dispaly here once at least one Contact has been created.
+          Summary of Contacts will display here once at least one Contact has been created.
         </div>
       )
     }
