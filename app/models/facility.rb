@@ -5,7 +5,7 @@ class Facility < CalsBase
   attr_accessor :fac_mail_city, :fac_mail_state, :fac_mail_zip_code, :fac_res_street_addr
   attr_accessor :fac_res_city, :fac_res_state, :fac_res_zip_code, :county, :phones
   attr_accessor :district_office, :status, :assigned_worker, :license_type, :license_number, :license_effective_date
-  attr_accessor :visits, :annual_visit_year, :last_visit_reason, :last_visit_date, :email_address, :capacity, :capacity_last_changed, :original_application_recieved_date
+  attr_accessor :visits, :annual_visit_year, :last_visit_reason, :last_visit_date, :email_address, :capacity, :capacity_last_changed, :original_application_recieved_date, :available_beds
 
   # once the real api is created  and we switch from mock api we will switch to these values for attr_accessors
   # attr_accessor :id, :type, :name, :licensee_name, :assigned_worker, :district_office

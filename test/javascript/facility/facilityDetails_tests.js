@@ -37,9 +37,6 @@ describe('Verify Facility Details', function () {
   it('Verify License status', function () {
     expect(detailsCompShallow.find('SmallInnerBlockDetails[title="STATUS"]').props().value).toBe('LICENSED')
   })
-  it('Verify Capacity / Capacity Last Changed', function () {
-    expect(detailsCompShallow.find('SmallInnerBlockDetails[title="CAPACITY / CAPACITY LAST CHANGED"]').props().value).toBe('10 / 10/01/2012')
-  })
   it('Verify License Effective Date when license status is "Licensed"', function () {
     expect(detailsCompShallow.find('SmallInnerBlockDetails[title="LICENSE / APPROVAL EFFECTIVE DATE"]').props().value).toBe('10/01/2012')
   })

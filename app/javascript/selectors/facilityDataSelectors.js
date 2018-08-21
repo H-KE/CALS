@@ -46,7 +46,8 @@ const getAssignedWorkerData = (assignedWorker) => ({
 })
 
 const getFacilityDetails = (facilityState) => ({
-  capacity: facilityState.capacity || 'N/A',
+  available_beds: facilityState.available_beds,
+  capacity: facilityState.capacity,
   capacity_last_changed: checkforDateOrNa(facilityState.capacity_last_changed),
   district_office: checkNameorNA(facilityState.district_office),
   licensee_name: facilityState.licensee_name || 'N/A',
