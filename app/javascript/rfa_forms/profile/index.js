@@ -41,7 +41,7 @@ export default class Profile extends React.Component {
                   <ContactsListCard
                     title={'Contacts'}
                     contacts={this.state.contacts}
-                    onClickCreateContact={() => { window.location = createContactUrl }}
+                    onClickCreateContact={() => { window.location.href = createContactUrl }}
                   />
                 </div>
               </div>
